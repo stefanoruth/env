@@ -87,6 +87,10 @@ export function parseConst<T extends readonly string[]>(args: {
 }): string | null {
     if (typeof args.value === 'undefined') {
         if (typeof args.defaultValue !== 'undefined') {
+            if (!args.options.includes(args.defaultValue)) {
+                throw new Error(`Invalid defaultValue for key "${args.key}", value "${args.defaultValue}"`)
+            }
+
             return args.defaultValue
         }
 
