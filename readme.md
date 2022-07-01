@@ -1,5 +1,9 @@
 # Typescript Env Parser
 
+[![Build & Tests](https://github.com/stefanoruth/env/actions/workflows/build.yml/badge.svg)](https://github.com/stefanoruth/env/actions/workflows/build.yml)
+
+A typescript env parser, that validates server configuration and works well integration with libraries such as dotenv
+
 ## Installation
 
 ```
