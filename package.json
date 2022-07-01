@@ -10,8 +10,7 @@
         "clean": "rm -rf dist",
         "build": "tsc",
         "dev": "tsc --watch",
-        "test": "mocha --require ts-node/register --require dotenv/config --recursive \"./src/**/*.test.ts\" --watch-files \"./src/**/*.ts\"",
-        "demo": "ts-node -r dotenv/config src/demo.ts"
+        "test": "mocha --require ts-node/register --require dotenv/config --recursive \"./src/**/*.test.ts\" --watch-files \"./src/**/*.ts\""
     },
     "files": [
         "dist"
