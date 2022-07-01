@@ -6,7 +6,7 @@ type EnvBoolean = { type: 'boolean'; defaultValue?: boolean; env?: string; optio
 type EnvConst<T = readonly string[]> = {
     type: 'const'
     options: T
-    defaultValue: string
+    defaultValue?: string
     env?: string
     optional?: boolean
 }

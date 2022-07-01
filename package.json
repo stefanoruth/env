@@ -5,12 +5,23 @@
     "repository": "https://github.com/stefanoruth/env.git",
     "author": "Stefano Ruth <stefanoruth@users.noreply.github.com>",
     "license": "MIT",
+    "private": false,
     "scripts": {
         "clean": "rm -rf dist",
         "build": "tsc",
         "dev": "tsc --watch",
-        "test": "mocha --require ts-node/register --require dotenv/config --recursive \"./src/**/*.test.ts\" --watch-files \"./src/**/*.ts\""
+        "test": "mocha --require ts-node/register --require dotenv/config --recursive \"./src/**/*.test.ts\" --watch-files \"./src/**/*.ts\"",
+        "demo": "ts-node -r dotenv/config src/demo.ts"
     },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "typescript",
+        "env",
+        "config",
+        "configuration"
+    ],
     "devDependencies": {
         "@types/chai": "^4.3.1",
         "@types/mocha": "^9.1.1",
@@ -33,5 +44,8 @@
         "bracketSpacing": true,
         "arrowParens": "avoid",
         "printWidth": 120
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
